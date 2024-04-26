@@ -24,46 +24,105 @@ class Task4 extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 height: 300,
                 width: 350,
-                child: const Padding(
-                  padding: EdgeInsets.only(bottom: 10),
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                          padding: EdgeInsets.only(bottom: 30, left: 15),
-                          child: Text(
-                            'Thor: love and \n Thunder',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                            ),
+                          padding: const EdgeInsets.only(bottom: 30, left: 15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              const Text(
+                                'Thor: love and \n Thunder',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  const Text(
+                                    '4,5',
+                                    style: TextStyle(color: Colors.amber),
+                                  ),
+                                  const Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                  ),
+                                  const Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                  ),
+                                  const Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                  ),
+                                  const Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                  ),
+                                  Container(
+                                    color: Colors.white,
+                                    child: const Icon(
+                                      Icons.star_half,
+                                      color: Colors.amber,
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
                           )),
-                      Padding(
-                        padding: EdgeInsets.all(15.0),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 150, right: 60),
                         child: CircleAvatar(
                           radius: 25,
                           child: Icon(Icons.play_arrow,
                               color: Color.fromARGB(255, 178, 174, 174),
                               size: 40),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 )),
-            const Padding(
-              padding: EdgeInsets.only(left: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Icon(Icons.calendar_month),
-                  Text(
-                    '17 sep 2022',
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Container(
+                height: 50,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 228, 223, 223),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.calendar_month),
+                          Text(
+                            '17 sep 2022',
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.watch_later_sharp),
+                          Text('148 minutes'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.filter_frames),
+                          Text('action'),
+                        ],
+                      ),
+                    ],
                   ),
-                  Icon(Icons.watch_later_sharp),
-                  Text('148 minutes'),
-                  Icon(Icons.filter_frames),
-                  Text('action'),
-                ],
+                ),
               ),
             ),
             const SizedBox(
